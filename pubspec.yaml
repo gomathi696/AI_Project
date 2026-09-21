@@ -1,31 +1,31 @@
-name: vision_guide
-description: Real-time navigation assistant for visually impaired users.
+name: visionguide
+description: "Real-time navigation assistant for visually impaired users."
 publish_to: 'none'
-version: 0.1.0
+
+version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.12.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  google_mlkit_object_detection: ^0.17.1
 
-  # Phase 1 (this phase) — UI, navigation, permissions
-  permission_handler: ^11.3.1
+  cupertino_icons: ^1.0.8
+
   camera: ^0.12.1
 
-  # Already added now so later phases drop in without touching pubspec again.
-  # Uncomment as each phase is implemented.
-  # camera: ^0.10.5+9            # Phase 2 — live camera feed
-  # tflite_flutter: ^0.10.4      # Phase 2 — YOLO / TFLite inference
-  # flutter_tts: ^4.0.2          # Phase 3 — voice guidance
+  ultralytics_yolo: ^0.6.15
+
+  flutter_tts: ^4.2.3
+
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
